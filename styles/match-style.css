@@ -115,18 +115,14 @@ body {
 
 
 
-/* blog secton CSS part */
-
-.blog-section {}
+/*----------------------------
+        blog section CSS part
+  ----------------------------*/
 
 .blog-container {
     display: flex;
     justify-content: space-between;
 }
-
-/*----------------------------
-        blog section CSS part
-  ----------------------------*/
 
 .blog-pages {
     height: 300px;
@@ -170,8 +166,6 @@ body {
     grid-gap: 20px;
 }
 
-.match-schedule {}
-
 .match-schedule .match {
     padding: 40px 20px;
     border: 1px solid #ddd;
@@ -187,10 +181,6 @@ body {
     justify-content: space-between;
 }
 
-.match .country-flag img {}
-
-.match .country-flag h2 {}
-
 .match .country-name {
     margin: 15px 0;
 }
@@ -198,8 +188,6 @@ body {
 .match .country-name h4>span {
     margin: 0 7px;
 }
-
-.match>p {}
 
 .germany img {
     width: 100%;
@@ -287,12 +275,14 @@ footer {
         margin: 0;
     }
 
+    /* banner responsive CSS */
     .banner-section {
         border-radius: 0;
     }
 
     .banner-content {
         margin: 0;
+        height: 500px;
     }
 
     .banner-text {
@@ -312,6 +302,7 @@ footer {
         text-overflow: ellipsis;
     }
 
+    /* blog section responsive CSS */
     .blog-container {
         flex-direction: column;
     }
@@ -356,12 +347,13 @@ footer {
 
 /* For mobile device responsive */
 
-@media only screen and (max-width:668px) {
+@media only screen and (max-width:688px) {
     .container {
         width: 100%;
         margin: 0;
     }
 
+    /* banner section responsive CSS */
     .banner-section {
         border-radius: 0;
     }
@@ -384,11 +376,11 @@ footer {
 
     .banner-img {
         width: 100%;
-        margin-top: 30px;
     }
 
     .banner-text h1 {
         font-size: 30px;
+        margin-top: 30px;
     }
 
     .banner-text p {
@@ -407,8 +399,8 @@ footer {
         display: block;
     }
 
-    .banner-img img {}
 
+    /* blog section responsive CSS */
     .blog-container {
         flex-direction: column;
     }
@@ -432,8 +424,6 @@ footer {
     footer {
         height: 550px;
     }
-
-    .footer-menu ul {}
 
     .footer-menu ul li {
         display: block;

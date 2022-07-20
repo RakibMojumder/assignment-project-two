@@ -126,8 +126,6 @@ body {
     justify-content: space-between;
 }
 
-
-/* blog page CSS part */
 .blog-pages {
     height: 300px;
     width: 300px;
@@ -160,9 +158,6 @@ body {
 }
 
 
-
-/* blog content CSS part */
-
 .blog-content {
     width: calc(100% - 320px);
     display: grid;
@@ -193,6 +188,10 @@ body {
     padding: 0 15px;
 }
 
+.blog-drescription a {
+    color: #000;
+}
+
 .blog-drescription>p {
     margin-top: 10px;
 }
@@ -210,10 +209,8 @@ body {
 
 .blog-update-time span {
     font-size: 18px;
-    margin-right: 10px;
+    margin-right: 5px;
 }
-
-.blog-update-time p {}
 
 .blog-feedback {
     display: flex;
@@ -223,10 +220,9 @@ body {
 
 .blog-feedback span {
     font-size: 18px;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
-.blog-feedback p {}
 
 /* -----------------------
         hidden buttton 
@@ -307,12 +303,14 @@ footer {
         margin: 0;
     }
 
+    /* banner setion responsive CSS */
     .banner-section {
         border-radius: 0;
     }
 
     .banner-content {
         margin: 0;
+        height: 500px;
     }
 
     .banner-text {
@@ -331,6 +329,9 @@ footer {
         white-space: nowrap;
         text-overflow: ellipsis;
     }
+
+
+    /* blog section responsive CSS */
 
     .blog-container {
         flex-direction: column;
@@ -376,12 +377,13 @@ footer {
 
 /* For mobile device responsive */
 
-@media only screen and (max-width:668px) {
+@media only screen and (max-width:688px) {
     .container {
         width: 100%;
         margin: 0;
     }
 
+    /* banner setion responsive CSS */
     .banner-section {
         border-radius: 0;
     }
@@ -409,6 +411,7 @@ footer {
 
     .banner-text h1 {
         font-size: 30px;
+        margin-top: 30px;
     }
 
     .banner-text p {
@@ -427,8 +430,8 @@ footer {
         display: block;
     }
 
-    .banner-img img {}
 
+    /* blog section responsive CSS */
     .blog-container {
         flex-direction: column;
     }
