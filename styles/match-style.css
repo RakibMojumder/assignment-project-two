@@ -115,9 +115,7 @@ body {
 
 
 
-/*----------------------------
-        blog section CSS part
-  ----------------------------*/
+/* blog secton CSS part */
 
 .blog-section {}
 
@@ -126,9 +124,13 @@ body {
     justify-content: space-between;
 }
 
+/*----------------------------
+        blog section CSS part
+  ----------------------------*/
+
 .blog-pages {
     height: 300px;
-    width: 25%;
+    width: 300px;
     background: #000;
     border-radius: 10px;
     display: flex;
@@ -138,94 +140,92 @@ body {
 
 .blog-pages .blog-page-list {
     width: 80%;
+    text-align: center;
 }
 
-.blog-pages .blog-page-list p {
-    padding: 15px;
+.blog-pages .blog-page-list a {
+    display: block;
+    color: #000;
     background: #fff;
     margin: 30px 0;
-    text-align: center;
-    font-size: 15px;
-    font-weight: 600;
+    padding: 15px 15px;
     border-radius: 10px;
+    font-size: 20px;
+    font-weight: 600;
 }
 
-.blog-pages .blog-page-list p:last-child {
-    background-color: #05c46b;
-}
-
-.blog-pages .blog-page-list p:last-child>a {
+.blog-pages .blog-page-list #match {
+    background: #05c46b;
     color: #fff;
 }
 
-.blog-pages .blog-page-list p a {
-    color: #000;
-    font-size: 20px;
-}
 
 
-.blog-content {
-    width: 73%;
+/* match schedule CSS part */
+
+.match-schedule {
+    width: calc(100% - 320px);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
 }
 
-.blogs {
+.match-schedule {}
+
+.match-schedule .match {
+    padding: 40px 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.match .country-flag {
+    display: flex;
+    justify-content: space-between;
+}
+
+.match .country-flag img {}
+
+.match .country-flag h2 {}
+
+.match .country-name {
+    margin: 15px 0;
+}
+
+.match .country-name h4>span {
+    margin: 0 7px;
+}
+
+.match>p {}
+
+.germany img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* -----------------------
+        hidden buttton 
+ --------------------------*/
+.tablet-view {
+    margin-top: 60px;
+    text-align: center;
+    display: none;
+}
+
+.tablet-view a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    background: #05c46b;
     border-radius: 10px;
 }
-
-.blogs .blog-img {}
-
-.blogs .blog-img img {
-    height: 100%;
-    width: 100%;
-}
-
-.blogs .blog-btn {
-    display: inline-block;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 0 15px;
-    margin-top: 15px;
-}
-
-.blogs>p {
-    margin-top: 15px;
-}
-
-.blogs .blog-update-details {
-    display: flex;
-}
-
-.blog-update-time {
-    display: flex;
-    align-items: center;
-    padding: 10px 0;
-    margin-right: 20px;
-}
-
-.blog-update-time span {
-    font-size: 18px;
-    margin-right: 10px;
-}
-
-.blog-update-time p {}
-
-.blog-feedback {
-    display: flex;
-    align-items: center;
-    padding: 10px 0;
-}
-
-.blog-feedback span {
-    font-size: 18px;
-    margin-right: 10px;
-}
-
-.blog-feedback p {}
-
-
 
 
 /* -----------------------
@@ -234,7 +234,7 @@ body {
 
 footer {
     height: 400px;
-    margin-top: 100px;
+    margin-top: 80px;
     background: #000;
     color: #FFF;
 }
@@ -254,14 +254,11 @@ footer {
     font-size: 40px;
 }
 
-hr {
+#horizontal-line {
     width: 100%;
     margin: 20px 0;
+    border: 1px solid #ddd;
 }
-
-.footer-menu {}
-
-.footer-menu ul {}
 
 .footer-menu ul li {
     display: inline-block;
@@ -282,7 +279,7 @@ hr {
 
 
 /* media qurie CSS */
-/* tablet devices */
+/* For tablet devices */
 
 @media only screen and (min-width:689px) and (max-width:992px) {
     .container {
@@ -304,10 +301,6 @@ hr {
         overflow: hidden;
     }
 
-    .banner-img {
-        width: 50%;
-    }
-
     .banner-text h1 {
         font-size: 45px;
     }
@@ -323,7 +316,7 @@ hr {
         flex-direction: column;
     }
 
-    .blog-content {
+    .match-schedule {
         width: 100%;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 20px;
@@ -347,17 +340,21 @@ hr {
         justify-content: space-between;
     }
 
-    .blog-pages .blog-page-list p {
+    .blog-pages .blog-page-list a {
         display: inline-block;
         padding: 10px 50px;
         background: #fff;
         margin: 0;
         border: 1px solid #ddd;
-        font-size: 15px;
+        font-size: 20px;
+    }
+
+    .tablet-view {
+        display: block;
     }
 }
 
-/* mobile device responsive */
+/* For mobile device responsive */
 
 @media only screen and (max-width:668px) {
     .container {
@@ -395,6 +392,7 @@ hr {
     }
 
     .banner-text p {
+        width: 100%;
         height: 50px;
         overflow: hidden;
         white-space: nowrap;
@@ -415,7 +413,7 @@ hr {
         flex-direction: column;
     }
 
-    .blog-content {
+    .match-schedule {
         width: 100%;
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 20px;
@@ -427,15 +425,8 @@ hr {
         background: #fff;
     }
 
-    .blog-pages .blog-page-list {
-        width: 100%;
-        text-align: center;
-    }
-
-    .blog-pages .blog-page-list p {
+    .blog-pages .blog-page-list a {
         border: 1px solid #ddd;
-        width: 70%;
-        margin: 20px auto;
     }
 
     footer {
